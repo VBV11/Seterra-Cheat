@@ -2,7 +2,7 @@
 // @name         Seterra Auto Click Hack
 // @namespace    http://tampermonkey.net/
 // @license      MIT
-// @version      1.5
+// @version      1
 // @description  Automatically clicks the correct country in Seterra with adjustable speed.
 // @author       VBV1
 // @match        https://www.geoguessr.com/*
@@ -10,7 +10,7 @@
 // ==/UserScript==
 
 // === Adjustable Speed ===
-const clickSpeed =10; // Change this value (in milliseconds). Lower = faster clicks.
+const clickSpeed = 0; // Change this value (in milliseconds). Lower = faster clicks.
 
 function simulateClick(element) {
     if (element) {
@@ -36,18 +36,8 @@ setInterval(() => {
             const correctCountry = document.querySelector(`#${CSS.escape(currentQuestionId)}`);
 
             if (correctCountry) {
-                correctCountry.style.setProperty("--fill-color", "black"); // Highlight the correct country
-
                 setTimeout(() => {
                     simulateClick(correctCountry);
-
-                    // Check for dot and click it if present
-                    const correctDot = correctCountry.querySelector("[class^='hitbox-dot']");
-                    if (correctDot) {
-                        correctDot.style.fill = "black";
-                        correctDot.style.display = "none"; // Hide the dot
-                        simulateClick(correctDot);
-                    }
                 }, clickSpeed); // Uses adjustable speed
             } else {
                 console.log("Correct country not found.");
