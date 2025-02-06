@@ -1,28 +1,29 @@
-# Seterra Auto Click Hack
+# 🖱️ Seterra Auto Click Hack
 
 ## 📌 Description
-A Tampermonkey script that automatically clicks the correct country in Seterra quizzes. This enhances gameplay by selecting the right answer instantly. You can also adjust the clicking speed to your preference.
+A Violentmonkey script that automatically clicks the correct country in Seterra quizzes. This script enhances gameplay by instantly selecting the right answer. Users can also adjust the clicking speed to their preference.
 
 ## 🚀 Features
 - ✅ **Auto-clicks the correct country**
 - ✅ **Supports hitbox dots (if present)**
 - ✅ **Highlights the correct location**
-- ✅ **Adjustable speed**
+- ✅ **Adjustable speed settings**
 - ✅ **Lightweight & efficient**
 
 ## 🛠 Installation
-1. **Install Tampermonkey** (if you haven’t already):  
-   🔗 [Chrome Web Store](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)  
-   🔗 [Firefox Add-ons](https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/)
-2. **Click on Tampermonkey Extension** ➝ *Create a new script*
-3. **Copy & Paste** the script below:
+1. **Install Violentmonkey** (if you haven’t already):  
+   🔗 [Chrome Web Store](https://chrome.google.com/webstore/detail/violentmonkey/jinjaccalgkegednnccohejagnlnfdag)  
+   🔗 [Firefox Add-ons](https://addons.mozilla.org/en-US/firefox/addon/violentmonkey/)
+   🔗 [Edge Add-ons](https://microsoftedge.microsoft.com/addons/detail/violentmonkey/eeagobfjdenkkddmbclomhiblgggliao)
+3. **Open Violentmonkey Extension** ➝ *Create a new script*
+4. **Copy & Paste** the following script:
 
 ```javascript
 // ==UserScript==
 // @name         Seterra Auto Click Hack
-// @namespace    http://tampermonkey.net/
+// @namespace    http://violentmonkey.net/
 // @license      MIT
-// @version      1
+// @version      1.0
 // @description  Automatically clicks the correct country in Seterra with adjustable speed.
 // @author       VBV1
 // @match        https://www.geoguessr.com/*
@@ -30,7 +31,7 @@ A Tampermonkey script that automatically clicks the correct country in Seterra q
 // ==/UserScript==
 
 // === Adjustable Speed ===
-const clickSpeed = 0; // Change this value (in milliseconds). Lower = faster clicks.
+const clickSpeed = 0; // Adjust speed in milliseconds (Lower = faster clicks)
 
 function simulateClick(element) {
     if (element) {
@@ -72,13 +73,13 @@ setInterval(() => {
 ```
 
 4. **Save & Enable** the script.
-5. **Refresh** the Seterra game page and play!
+5. **Refresh** the Seterra game page and enjoy automated gameplay! 🎯
 
 ## ⚙️ Adjusting Click Speed
-Change the `clickSpeed` value in milliseconds:
-- **Faster clicks:** Lower the value (e.g., `100`)
-- **Slower clicks:** Increase the value (e.g., `500`)
+Modify the `clickSpeed` value in milliseconds to control the clicking speed:
+- **Faster clicks:** Set a lower value (e.g., `100` ms)
+- **Slower clicks:** Set a higher value (e.g., `500` ms)
 
 ---
-Enjoy auto-clicking through Seterra! 🌍🚀
+Enjoy effortless Seterra gameplay! 🌍🚀
 
